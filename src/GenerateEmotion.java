@@ -6,12 +6,13 @@ public class GenerateEmotion {
             if(abstractDomain.discrepencyFromExpectation>.4 && abstractDomain.suddenness>.2){
                 return "Emotion: Surprise\t Effect: Stunned";
             }
-            if(abstractDomain.predictibility<0 && abstractDomain.suddenness>0){
-                return "Emotion: Joy\t Effect: Excited";
-            }
             if(abstractDomain.familiarity<0){
                 return "Emotion: Hope\t Effect: Focused";
             }
+            if(abstractDomain.predictibility<.4 && abstractDomain.suddenness>0){
+                return "Emotion: Joy\t Effect: Excited";
+            }
+
 
 
         }

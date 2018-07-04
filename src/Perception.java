@@ -29,14 +29,14 @@ public class Perception {
     }
 
     public void calculateFamiliarity(){
-        double value = (2*(.5-Math.abs(speech.getIntensity())) + 2*(.5-Math.abs(speech.getFluency())) + speech.getIntonation() + 2*(.5-Math.abs(speech.getDuration()))
+        double value = (2*(.5-Math.abs(speech.getIntensity())) + 2*(.5-Math.abs(speech.getFluency())) + 2*(.5-Math.abs(speech.getIntonation())) + 2*(.5-Math.abs(speech.getDuration()))
                 + speech.getPitchRange()*-1 + 2*(.5-Math.abs(speech.getVolume())) + 2*(.5-Math.abs(speech.getRate())) + speech.getPitchVariance()*-1)/8;
         abstractDomain.setFamiliarity(value);
     }
 
     void calculatePredictibility(){
-        double value = (speech.getIntonation() + 2*(.5-Math.abs(speech.getRate()))
-        + 2*(.5-Math.abs(speech.getPitchVariance())))/3;
+        double value = (2*(.5-Math.abs(speech.getIntensity()))+ 2*(.5-Math.abs(speech.getIntonation())) + 2*(.5-Math.abs(speech.getRate()))
+        + 2*(.5-Math.abs(speech.getPitchVariance())))/4;
         abstractDomain.setPredictibility(value);
     }
 
