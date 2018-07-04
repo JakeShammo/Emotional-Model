@@ -10,6 +10,14 @@ public class Mood {
         this.type = type;
     }
 
+    public double getDecayRate() {
+        return decayRate;
+    }
+
+    public void setDecayRate(double decayRate) {
+        this.decayRate = decayRate;
+    }
+
     public int getType() {
         return this.type;
     }
